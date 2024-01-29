@@ -1,0 +1,20 @@
+name: singdev
+version: '1.0'
+summary: Sing Developments Terminal
+description: |
+  Terminal for Sing Developments
+grade: stable
+confinement: strict
+
+base: core18
+
+apps:
+  singdev-terminal:
+    command: singdevelopmentsterminal.py
+
+parts:
+  singdev-terminal:
+    source: .
+    plugin: python
+    python-packages:
+      - requests
